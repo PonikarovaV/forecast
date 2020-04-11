@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Ванда Поникарова">
+    <title>Forecast</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body class="page">
+    <header class="header">
+        <h1 class="header__title">Прогноз погоды</h1>
+        <p class="header__subtitle">Коротко о главном</p>
+    </header>
+
+    <main class="main">
+        <section class="getinfo">
+            <form class="form">
+                <div class="form__field">
+                    <label class="form__label" for="country">Страна</label>
+                    <input class="form__input" id="country" type="text" placeholder="Страна" required>
+                    <span class="form__error" id="error-country"></span>
+                </div>
+                <div class="form__field">
+                    <label class="form__label" for="city">Город</label>
+                    <input class="form__input" id="city" type="text" placeholder="Город" required>
+                    <span class="form__error" id="error-city"></span>
+                </div>
+                <button class="form__button" disabled>Отправить запрос</button>
+            </form>
+        </section>
+        <section class="popup popup_closed">
+            <div class="forecast">
+                <h2 class="forecast__title"></h2>
+                <p class="forecast__temperature"></p>
+                <p class="forecast__weather"></p>
+                <p class="forecast__wind"></p>
+                <p class="forecast__advice"></p>
+                <button class="forecast__button">ОК</button>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/Api.js"></script>
+    <script src="./scripts/Validation.js"></script>
+    <script src="./scripts/Form.js"></script>
+    <script src="./scripts/Forecast.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
