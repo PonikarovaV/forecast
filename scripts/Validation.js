@@ -28,7 +28,7 @@ class Validation {
     inputValidation(input) {
         const regexp = /^[a-zA-Zа-яёА-ЯЁ\\-\s]{2,30}$/gi;
     
-        let validationResult = regexp.test(input.value);
+        let validationResult = regexp.test(input.value) && input.value.trim() !== '';
 
         return validationResult;
     }
