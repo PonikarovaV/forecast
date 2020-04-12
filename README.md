@@ -3,6 +3,8 @@
 
 [Демо](https://ponikarovav.github.io/forecast/)
 
+[Видео](https://yadi.sk/i/oQunahjjt5SkYw)
+
 В проекте использован нативный JavaScript.
 
 Небольшое веб-приложение для получения информации о погоде по России.
