@@ -1,4 +1,4 @@
-const api = new Api(key);
+const api = new Api();
 const validation = new Validation();
 
 const forecastOptions = {
