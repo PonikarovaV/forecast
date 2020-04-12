@@ -20,30 +20,31 @@ class Form {
             event.preventDefault();
 
             const countryInput = document.querySelector('#country');
-            const cityInput = document.querySelector('#country');
-            const country = this.convertCountryName(countryInput.value);
-            const city = cityInput.value;
+            const cityInput = document.querySelector('#city');
+
+            const countryValue = this.convertToCountryCode(countryInput.value);
+            const cityValue = cityInput.value;
     
-            this.sendRequest(country, city);
+            this.sendRequest(countryValue, cityValue);
     
             this.form.reset();
         });
     }
 
-    convertCountryName(country) {
+    convertToCountryCode(country) {
         if (country.toLowerCase() === 'россия') {
-            return 'ru';
-        }
-
-        if (country.toLowerCase() === 'russia') {
-            return 'ru';
+            return 'ru'
+        } else if (country.toLowerCase() === 'russia') {
+            return 'ru'
+        } else {
+            alert('Выбирайте Россию 😎');
+            throw new Error('Выбирайте Россию 😎');
         }
     }
 
-    sendRequest(city) {
-        this.api.getForecast(city)
+    sendRequest(country, city) {
+        this.api.getForecast(country, city)
             .then(res => {
-
                 const weatherParams = {
                     city: res.name,
                     temperature: `${Math.round(Number(res.main.temp) - 273.15)}`,
