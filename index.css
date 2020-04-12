@@ -262,6 +262,35 @@
     }
 
     .forecast {
+        max-width: 250px;
         padding: 10px;
+    }
+
+    .forecast__title {
+        font-size: 18px;
+    }
+
+    .forecast__weather {
+        font-size: 14px;
+    }
+
+    .forecast__weather {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.2;
+    }
+    
+    .forecast__wind {
+        font-size: 14px;
+    }
+    
+    .forecast__advice {
+        font-size: 14px;
+    }
+    
+    .forecast__button {
+        font-size: 10px;
     }
 }
