@@ -22,8 +22,8 @@ class Form {
             const countryInput = document.querySelector('#country');
             const cityInput = document.querySelector('#city');
 
-            const countryValue = this.convertToCountryCode(countryInput.value);
-            const cityValue = cityInput.value;
+            const countryValue = this.convertToCountryCode(countryInput.value.trim());
+            const cityValue = cityInput.value.trim();
     
             this.sendRequest(countryValue, cityValue);
     
