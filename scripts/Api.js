@@ -1,6 +1,6 @@
 class Api {
-    constructor(key) {
-        this.key = key;
+    constructor() {
+        this.key = '131a3537465d75dd6ee7babe781bdbb2';
     }
 
     getForecast(country, city) {
